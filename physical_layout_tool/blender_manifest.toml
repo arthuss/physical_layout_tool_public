@@ -1,0 +1,44 @@
+schema_version = "1.0.0"
+
+# Physics Layout Tool - Blender Extension mit C++ GPU Acceleration
+id = "physical_layout_tool"
+version = "1.0.0"
+name = "Physics Layout Tool"
+tagline = "GPU-accelerated physics scattering with instancing"
+maintainer = "arthuss (Sascha Bay)"
+type = "add-on"
+
+# Optional: tag list for better discoverability
+tags = ["3D View", "Object", "Physics", "Modeling"]
+
+blender_version_min = "4.2.0"
+
+# License - required GPL for Blender extensions
+license = [
+  "SPDX:GPL-3.0-or-later",
+]
+
+# Optional: copyright information
+copyright = [
+  "2025 Physics Layout Tool Team",
+]
+
+# Optional: platform support - Windows focus initially
+platforms = ["windows-x64"]
+
+# Optional: permissions for file access and GPU operations
+[permissions]
+files = "Access triangle mesh data and export scattered objects"
+
+# Optional: build settings for C++ compilation
+[build]
+# Exclude development files but keep source for compilation
+paths_exclude_pattern = [
+  "__pycache__/",
+  "/.git/",
+  "/*.zip",
+  "/backup/",
+  "/source/extensions.md",
+  "*.md",
+  "workspace.code-workspace",
+]
